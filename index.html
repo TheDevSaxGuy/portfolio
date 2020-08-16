@@ -1,25 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hola soy Juan Ortiz</title>
+    <link  rel="icon" type="image/png" href="images/favicon.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="header">
+        <figure class="logo">
+            <img alt="Logo" src="images/logo_size_sax.jpg"/> 
+        </figure>
+        <div>
+        <nav class="menu">
             <ul>
-                <li><a href="">Porfafolio</a></li>
-                <li><a href="">Experiencia</a></li>
-                <li><a href="">Trabajemos juntos</a></li>
+                <li><a class ="link" href="#portfolio">Porfafolio</a></li>
+                <li><a class ="link" href="#tech">Experiencia</a></li>
+                <li><a class ="link" href="#collaborate">Trabajemos juntos</a></li>
             </ul>
         </nav>
+        </div>
     </header>
-    <section>Sección principal</section>
-    <section>Sección portafolio</section>
-    <section>Sección eventos</section>
-    <section>Sección contacto</section>
-    <footer></footer>
+    <section class="hero">
+        <h1>Hola soy <strong> Juan Ortiz </strong>, desarrollador 
+        <br/> <strong>Javascript </strong> con
+        <br/>pasión por la tecnología y la música.</h1>
+        <img src="images/hero.jpg" width="500px" height="300px" alt="imagen principal del sitio"> 
+    </section>
+    <section id="portfolio" class="portfolio">
+        <article class="project">
+            <h2>Portafolio (proyectos destacados)</h2>
+        </article>
+        <article>
+            <h3 class="project-title">Johnny Sax Page</h3>
+            <h6 class="project-techs">Javascript Vainilla</h6>
+            <p class="project-date"><small><strong>Fecha</strong> 2018</small></p>
+            <p class="project-url"><small><strong>Puedes verlo en:</strong>url</small></p>
+            <p class="project-description">Esta es una de mis primeras paginas web creada para dar promoción a mi otro hobbie el cual es tocar el saxofon.
+            Se ha ido adaptando con el tiempo y he tratado de darle un diseño moderno a medida que avanzo cosas nuevas. Fue programada con HTML5, CSS3 y Javascript.
+            </p>
+            <figure class="project-imageContainer">
+                <img class="project-image" src="images/johnnysax.png" width="500"/>
+            </figure>
+        </article>
+    </section>
+    <section id="tech" >
+        <article class="tech">
+        <h2>Tecnlogías</h2>
+        <figure class="tech-imageContainer">
+            <img class="tech-image" src="images/javascript.png" width="500"/>
+        </figure>
+        <h3 class="tech-title">Formación</h3>
+        <p>Una de mis grandes pasiones es aprender nuevas tecnologías y construir cosas geniales con mis nuevos conocimientos.</p>
+        </article>
+    </section>
+    <section id="collaborate" class="contact">
+        <form action="/suscripcion/" class="form-email">
+            <h3>Creamos algo juntos?</h3>
+            <input type="text" placeholder="Déjame tu email" id="email" />
+            <button>Enviar</button> 
+        </form>
+    </section>
+    <footer class="footer">
+
+    </footer>
 
 </body>
 </html>
