@@ -11,40 +11,54 @@
 <body>
     <header class="header">
         <figure class="logo">
-            <img alt="Logo" src="images/logo_size_sax.jpg"/> 
+            <img alt="Logo" src="images/logo_size_invert_sax.jpg"/> 
         </figure>
-        <div>
         <nav class="menu">
             <ul>
                 <li><a class ="link" href="#portfolio">Porfafolio</a></li>
-                <li><a class ="link" href="#tech">Experiencia</a></li>
+                <li><a class ="link" href="#tech">Tecnologías</a></li>
                 <li><a class ="link" href="#collaborate">Trabajemos juntos</a></li>
             </ul>
         </nav>
-        </div>
     </header>
     <section class="hero">
-        <h1>Hola soy <strong> Juan Ortiz </strong>, desarrollador 
-        <br/> <strong>Javascript </strong> con
-        <br/>pasión por la tecnología y la música.</h1>
-        <img src="images/hero.jpg" width="500px" height="300px" alt="imagen principal del sitio"> 
+        <h1>Hola! soy <strong> Juan Ortiz</strong>, 
+        <br/> desarrollador <strong>Javascript </strong> con
+        <br/>pasión por la tecnología y la <strong>música.</strong></h1>
+        <!--<img src="images/hero.jpg" width="500px" height="300px" alt="imagen principal del sitio"> -->
     </section>
     <section id="portfolio" class="portfolio">
+        <h2>Portafolio (proyectos destacados)</h2>
+        <div class="portfolio-wrapper">
         <article class="project">
-            <h2>Portafolio (proyectos destacados)</h2>
-        </article>
-        <article>
+            <div class="project-details">
             <h3 class="project-title">Johnny Sax Page</h3>
-            <h6 class="project-techs">Javascript Vainilla</h6>
-            <p class="project-date"><small><strong>Fecha</strong> 2018</small></p>
-            <p class="project-url"><small><strong>Puedes verlo en:</strong>url</small></p>
+            <h6 class="project-techs"> HTML5 / CSS3 / Javascript</h6>
+            <p class="project-date"><small>Fecha<strong> 2018</strong></small></p>
+            <p class="project-url"><small>Puedes verlo <strong><a href="https://thedevsaxguy.github.io/JohnnySax/" target="_blank">aquí</a></strong></small></p>
             <p class="project-description">Esta es una de mis primeras paginas web creada para dar promoción a mi otro hobbie el cual es tocar el saxofon.
             Se ha ido adaptando con el tiempo y he tratado de darle un diseño moderno a medida que avanzo cosas nuevas. Fue programada con HTML5, CSS3 y Javascript.
             </p>
             <figure class="project-imageContainer">
-                <img class="project-image" src="images/johnnysax.png" width="500"/>
+                <a href="http://thedevsaxguy.github.io/JohnnySax/" target="_blank" rel="noopener noreferrer"><img class="project-image" src="images/johnnysax.png" /></a>
+            </figure>
+            </div>
+
+        </article>
+        <article class="project">
+            <div class="project-details">
+            <h3 class="project-title">Tap Music</h3>
+            <h6 class="project-techs">HTML5 / CSS3 / Javascript / Animaciones CSS</h6>
+            <p class="project-date"><small>Fecha<strong> 2019</strong></small></p>
+            <p class="project-url"><small>Puedes verlo<strong><a href="https://thedevsaxguy.github.io/Tap-Music/"> aquí</a></strong></small></p>
+            <p class="project-description"> Esta es una Single Page application donde puedes hacer música dando clic o haciendo tap en cada una de las teclas de abajo. Pruebala y diviertete un rato.
+            </p>
+            </div>
+            <figure class="project-imageContainer">
+                <a href="http://thedevsaxguy.github.io/Tap-Music/" target="_blank" rel="noopener noreferrer"><img class="project-image" src="images/tapmusic.png" /></a>
             </figure>
         </article>
+        </div>
     </section>
     <section id="tech" >
         <article class="tech">
