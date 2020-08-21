@@ -41,18 +41,42 @@ h1{
     font-size: 40px;
     line-height: 1.5em;
     letter-spacing: -.2px;
-    margin:10px 500px 30px 30px;
+    margin:0;
+}
+h2{
+    color:#f6c90e;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+    position: inherit;
+    background-color: inherit;
 }
 .hero{
-    height: 300;
-    background-image: url('../images/hero.jpg');
-    background-color: #142850;
+    height: 300px;
+    /*background-image: url('../images/hero.jpg');
     background-size: 350px 300px;
     background-repeat: no-repeat;
-    background-position-x: 98%;
+    background-position-x: 98%;*/
+    background-color: #142850;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
 }
+.hero-image{
+    object-fit: cover;
+}
+
 .menu{
     height: inherit;
 }
@@ -61,7 +85,8 @@ h1{
     display: flex;
     justify-content: space-between;
     background-color: black;
-    height: 90px;
+    height: 70px;
+    align-items: center;
 }
 .header ul{
     display: flex;
@@ -78,21 +103,142 @@ h1{
     align-items: center;
     padding: 0 10px;
 }
-.project-details{
-    width: 400px;
-}
-.project-image{
-    width: 400px;
-}
-.project{
-    border: 1px solid #eeeeee;
-    border-radius: 10px;
-    margin: 15px 10px;
-    padding: 20px;
-    flex-shrink: 0;
+
+.portfolio{
+    padding:20px
 }
 .portfolio-wrapper{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+.project{
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    padding: 20px;
+    flex-shrink: 0;
+
+    align-items: center;
+    justify-content: space-between;
+}
+.project-title{
+    font-size: 30px;
+    margin-top:0;
+    margin-bottom: 10;
+}
+.project-details{
+    width: 400px;
+}
+.project-techs, .project-date, .project-url{
+    margin:10px 0 ;
+}
+.project-description{
+    font-size:20px;
+}
+.project-image{
+    width: 400px;
+}
+.card-list{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card-list-title{
+    margin-left: 20px;
+
+}
+.card{
+    margin: 10px;
+    width: 440px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background-color: #e7e7e7;
+}
+.card img{
+    width: 480px;
+    height: 200px;
+    object-fit: fill;
+}
+.card-detail{
+    margin: 20px 40px;
+    background-color: white;
+    color: #27496d;
+    margin-top: -40px;
+    position:relative;
+    padding: 20px;
+    text-align: center;
+    opacity: 95%;
+}
+.card-description{
+    text-align: center;
+}
+.card-url{
+    border: 1px solid ;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #056fff;
+    border-radius: 5px;
+}
+.contact{
+    background-color: #142850;
+    color: #eeeeee;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-link{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-size: 50px 50px;
+    margin: 0 10px;
+}
+
+.form-email input{
+    border-color: #056fff;
+    padding: 5px 20px 5px 25px;
+    border-radius: 5px;
+    border-style: solid;
+}
+.form-email button{
+    display: block;
+    margin-top:10px;
+    background: transparent;
+    color: #eeeeee;
+    padding: 5px 0;
+    border-radius: 5px;
+    border-style: solid;
+    width: 100px;
+    margin-top: 10px;
+}
+.form-email h3{
+    font-family: 'Source Sans Pro';
+}
+.tech{
+    height: 300px;
+    width: 1000px;
+    display: flex;
+    background-color: #eeeeee;
+    justify-content: center;
+}
+
+.tech-image{
+    height: 300px;
+    object-fit: scale-down;
+
+}
+.footer{
+    background-color: black;
+    color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+.footer img{
+    width: 20px;
+    vertical-align: middle;
 }
