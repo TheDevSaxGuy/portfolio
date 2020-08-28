@@ -8,7 +8,6 @@ color:eeeeee
 color pallete 2:
 bg:303841
 nav:3a4750
-
 **/
 body{
     font-family: 'Source Sans Pro', sans-serif;
@@ -52,8 +51,10 @@ h2{
     margin-bottom: 40px;
 }
 .container{
-    width: 1000px;
+    max-width: 1000px;
+    flex: 1;
     margin: 0 auto;
+    padding: 0 1em;
     display: inherit;
     justify-content: inherit;
     align-items: inherit;
@@ -62,31 +63,13 @@ h2{
     position: inherit;
     background-color: inherit;
 }
-.hero{
-    height: 300px;
-    /*background-image: url('../images/hero.jpg');
-    background-size: 350px 300px;
-    background-repeat: no-repeat;
-    background-position-x: 98%;*/
-    background-color: #142850;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.hero-image{
-    object-fit: cover;
-}
-
-.menu{
-    height: inherit;
-}
 .header{
     background-color: #27496d;
     display: flex;
     justify-content: space-between;
     background-color: black;
-    height: 70px;
     align-items: center;
+    flex-wrap: wrap;
 }
 .header ul{
     display: flex;
@@ -103,14 +86,24 @@ h2{
     align-items: center;
     padding: 0 10px;
 }
+.hero{
+    background-color: #142850;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.hero-image{
+    object-fit: cover;
+}
+
+.menu{
+    height: inherit;
+}
 
 .portfolio{
     padding:20px
-}
-.portfolio-wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
 }
 
 .project{
@@ -118,9 +111,11 @@ h2{
     border-radius: 10px;
     padding: 20px;
     flex-shrink: 0;
-
     align-items: center;
     justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 .project-title{
     font-size: 30px;
@@ -128,7 +123,7 @@ h2{
     margin-bottom: 10;
 }
 .project-details{
-    width: 400px;
+    width: 50%;
 }
 .project-techs, .project-date, .project-url{
     margin:10px 0 ;
@@ -136,28 +131,35 @@ h2{
 .project-description{
     font-size:20px;
 }
-.project-image{
-    width: 400px;
+.project-imageContainer{
+    width: 50%;
 }
+.project-image{
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+}
+
 .card-list{
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .card-list-title{
     margin-left: 20px;
 
 }
 .card{
-    margin: 10px;
-    width: 440px;
+    margin: 1%;
+    width: 47%;
     border-radius: 10px;
     flex-shrink: 0;
     overflow: hidden;
     background-color: #e7e7e7;
 }
 .card img{
-    width: 480px;
+    width: 98%;
     height: 200px;
     object-fit: fill;
 }
@@ -188,6 +190,7 @@ h2{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .social-link{
@@ -220,16 +223,22 @@ h2{
 }
 .tech{
     height: 300px;
-    width: 1000px;
+    width: 98%;
     display: flex;
     background-color: #eeeeee;
     justify-content: center;
+    margin:10px;
 }
-
+.tech-header{
+  margin-left: 30px;
+}
 .tech-image{
-    height: 300px;
+    width: 100%;
+    height: 100%;
     object-fit: scale-down;
-
+}
+.tech-details{
+    margin:10px;
 }
 .footer{
     background-color: black;
@@ -237,8 +246,131 @@ h2{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     }
 .footer img{
     width: 20px;
     vertical-align: middle;
+}
+/*Desktop First desde el mas grande*/
+@media screen and (max-width:1024px){
+
+    h1{
+        font-size: 1.2em;
+        z-index: 2;
+        background: rgba(0,0,0.5);
+    }
+
+}
+@media screen and (max-width:767px){
+   
+    .hero{
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        padding: 2em;
+        background-color:transparent
+    }
+    .hero-image{
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top:0;
+        bottom: 0;
+        width: 100%;
+        object-fit: none;
+    }
+    .header{
+        display: block;
+        height: auto;
+    }
+    .header ul{
+        display: initial;
+    }
+    .header ul li{
+        height:50px;
+    }
+    .header a{
+        justify-content: center;
+    }
+    .header .logo{
+        text-align: center;
+    }
+
+    .project{
+        display: block;
+    }
+    .project-imageContainer{
+        width: auto;
+        text-align: center;
+    }
+    .project-image{
+        object-fit: cover;
+        
+        height: 200px;
+    }
+    .project-details{
+        width: auto;
+        font-size: 16px;
+    }
+    .project-title{
+        font-size: 1.5em;
+        margin-bottom: .3em;
+    }
+    .project-url{
+        font-size: 1em;
+
+    }
+    .project-techs{
+        font-size: 1em;
+
+    }
+    .project-date{
+        font-size: 1em;
+    }
+    .project-description{
+        font-size: .8em;
+    }
+    .project-techs, .project-date, .project-url{
+        margin:.4em 0 ;
+    }
+    .card{
+        width: auto;
+        flex-shrink: initial;
+    }
+}
+@media screen and (max-width:480px){
+    h1 {
+        font-size: 1.5em;
+    }
+    .project-details{
+        font-size: 12px;
+    }
+    .card-detail{
+        margin: -2em .5em .5em .5em;
+        padding: 1em;
+    }
+    .contact{
+        height: auto;
+        padding: 1em 0;
+        text-align: center;
+        display: block;
+    }
+    .contact button{
+        margin: 1em auto;
+    }
+    .footer{
+        text-align: center;
+        display: block;
+        border: 1px solid transparent;
+    }
+}
+@media screen and (max-width:320px){
+   h1{
+       font-size: 1.2em;
+   }
+   .hero{
+       padding: 2em 1em;
+   }
 }
