@@ -7,8 +7,10 @@
     <link  rel="icon" type="image/png" href="images/favicon.png"/>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="fonts/style.css">
 </head>
 <body>
+    <i class="icon-menu burguer-button" id="burguer-menu"></i>
     <header class="header">
         <div class="container">
         <figure class="logo">
@@ -38,22 +40,22 @@
         <article class="project">
             <div class="project-details">
             <h3 class="project-title">CV React</h3>
-            <h6 class="project-techs"> React JS / Firebase / Github Pages / Animaciones CSS</h6>
-            <p class="project-date"><small>Fecha<strong> 2019</strong></small></p>
-            <p class="project-url"><small>Puedes verlo <strong><a href="https://thedevsaxguy.github.io/CurriculumVitae/" target="_blank">aquí</a></strong></small></p>
+            <p class="project-techs"> React JS / Firebase / Github Pages / Animaciones CSS</p>
+            <p class="project-date"><small><strong> 2019</strong></small></p>
+            <p class="project-url"><small><strong><a href="https://thedevsaxguy.github.io/CurriculumVitae/" target="_blank">Link</a></strong></small></p>
             <p class="project-description">
                 Una Single Page Application desarrollada en React JS. Es una versión web de mi Curriculum Vitae. La información de el no está escrita en el Frontend si no que, se accede a ella a través de una API en firebase. La página esta hosteada en Github Pages.
             </p>
         </div>
         <figure class="project-imageContainer">
-            <a href="http://thedevsaxguy.github.io/JohnnySax/" target="_blank" rel="noopener noreferrer"><img class="project-image" src="images/cv.PNG" /></a>
+            <a href="https://thedevsaxguy.github.io/CurriculumVitae/" target="_blank" rel="noopener noreferrer"><img class="project-image" src="images/cv.PNG" /></a>
         </figure>
             
         </article>
         <article class="project">
             <div class="project-details">
             <h3 class="project-title">Nutrivida</h3>
-            <h6 class="project-techs">ReactJS / Firebase / Redux</h6>
+            <p class="project-techs">ReactJS / Firebase / Redux</p>
             <p class="project-date"><small>Fecha<strong> 2020</strong></small></p>
             <p class="project-url"><small>Puedes verlo<strong><a href="https://github.com/TheDevSaxGuy/Nutricion"> aquí</a></strong></small></p>
             <p class="project-description"> Web application que tiene como finalidad el dar seguimiento al proceso de pacientes a través de su tratamiento con un nutriólogo. Utiliza muchas funciones de Firebase como la autenticacion de FB, el store de imagenes y el host de la página. </p>
@@ -98,7 +100,7 @@
         <div class="card-detail">
         <h3 class="card-title">JohnnySax </h3>
         <p class="card-description">Landing Page que me ayuda a dar promoción a mi otro Hobbie el cual es tocar el saxofón. </p>
-        <a class="card-url" href="" target="_blank"> Ver el proyecto</a>
+        <a class="card-url" href="http://thedevsaxguy.github.io/JohnnySax/" target="_blank"> Ver el proyecto</a>
         </div>
         </article>
         <article class="card">
@@ -108,7 +110,7 @@
         <div class="card-detail">
         <h3 class="card-title">Landing Page Huddle</h3>
         <p class="card-description">Página web construida por el reto de programación web en platzi.</p>
-        <a class="card-url" href="https://thedevsaxguy.github.io/Tap-Music/" target="_blank"> Ver el proyecto</a>
+        <a class="card-url" href="https://thedevsaxguy.github.io/huddle/" target="_blank"> Ver el proyecto</a>
         </div>
         </article>
         </div>
@@ -121,7 +123,7 @@
         <article id="tech">
         <div class="tech">
         <figure class="tech-imageContainer">
-            <img class="tech-image" src="images/Technologies.jpg"/>
+            <img class="tech-image" src="images/Technologies.png"/>
         </figure>
         </div>
         <div class="tech-details">
@@ -141,21 +143,48 @@
             <button>Enviar</button> 
         </form>
             <div class="social">
-                <a href="https://twitter.com/TheDevSaxguy" class="social-link twitter" target="_blank"><img src="./images/twitter.svg"></a>
-                <a href="https://www.facebook.com/profile.php?id=100007548437936" class="social-link facebook" target="_blank"><img src="./images/facebook.svg"></a>
-                <a href="https://github.com/TheDevSaxGuy" class="social-link github" target="_blank"><img src="./images/github.svg"></a>
-                <a href="https://www.instagram.com/juanitortizsax/" class="social-link instagram" target="_blank"><img src="./images/instagram.svg"></a>
+                <a href="https://twitter.com/TheDevSaxguy" class="twitter" target="_blank"><i class="icon-twitter social-link twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100007548437936" class="facebook" target="_blank"><i class="icon-facebook social-link" ></i></a>
+                <a href="https://github.com/TheDevSaxGuy" class="github" target="_blank"><i class="icon-github social-link"></i></a>
+                <a href="https://www.instagram.com/juanitortizsax/" class="instagram" target="_blank"><i class="icon-instagram social-link"></i></a>
             </div>
             </div>
     </section>
     <footer class="footer">
         <div class="container">
-        <div><p>Portafolio 2020 <img src="images/code.png" alt="Code"></p></div>
+        <div><p>Portafolio 2020 Juan Ortiz @TheDevSaxGuy</p></div>
         <div>
-            <p>Made with 🖤 from México</p>
+            <p>Hecho con 🖤 desde Torreon México</p>
         </div>
         </div>
     </footer> 
+    <script>    
+        const menu= document.querySelector('.menu');
+        const burgerButton = document.querySelector('#burguer-menu');
+        
+        const ipad = window.matchMedia('screen and (max-width:767px)');
+        ipad.addListener(validation);
+        validation(ipad);
+        function validation(event){
+            console.log(event.matches);
+            if (event.matches){
+                burgerButton.addEventListener('click', hideShow);
+            }
+            else{
+                burgerButton.removeEventListener('click', hideShow);
+                }
 
+        }
+        function hideShow(){
+            if(menu.classList.contains('is-active')){
+                menu.classList.remove('is-active');
+            }
+
+            else{
+            menu.classList.add('is-active');
+            }
+        }
+
+    </script>
 </body>
 </html>

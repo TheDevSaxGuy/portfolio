@@ -80,12 +80,13 @@ h2{
 }
 .header a{
     color:#eeeeee;
-    text-decoration: none;
-    height: inherit;
+    text-decoration: underline;
+    height: 40px;
     display: flex;
     align-items: center;
     padding: 0 10px;
 }
+
 .hero{
     background-color: #142850;
     height: 300px;
@@ -98,18 +99,16 @@ h2{
     object-fit: cover;
 }
 
-.menu{
-    height: inherit;
-}
 
 .portfolio{
-    padding:20px
+    padding:20px;
 }
 
 .project{
     border: 1px solid #eeeeee;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
+    margin:10px 0;
     flex-shrink: 0;
     align-items: center;
     justify-content: space-between;
@@ -124,6 +123,7 @@ h2{
 }
 .project-details{
     width: 50%;
+    padding:5px;
 }
 .project-techs, .project-date, .project-url{
     margin:10px 0 ;
@@ -132,7 +132,7 @@ h2{
     font-size:20px;
 }
 .project-imageContainer{
-    width: 50%;
+    width: 45%;
 }
 .project-image{
     max-width: 100%;
@@ -194,11 +194,13 @@ h2{
 }
 
 .social-link{
+    color:#eeeeee;
     width: 50px;
     height: 50px;
     display: inline-block;
     background-size: 50px 50px;
     margin: 0 10px;
+    font-size:40px;
 }
 
 .form-email input{
@@ -252,6 +254,17 @@ h2{
     width: 20px;
     vertical-align: middle;
 }
+.burguer-button{
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+    background-color:rgba(0,0,0,0.8);
+    display: none;
+    position: fixed;
+    z-index:4;
+    left:5px;
+    top:5px;
+}
 /*Desktop First desde el mas grande*/
 @media screen and (max-width:1024px){
 
@@ -263,15 +276,40 @@ h2{
 
 }
 @media screen and (max-width:767px){
-   
+    .menu{
+        position: fixed;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 3;
+        top:0;
+        left:0;
+        width: 100vw;
+       /*  height: 100vh; */
+       bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left:-100vw;
+        transition:.3s;
+    }
+    .menu.is-active{
+        left:0;
+    }
+    .burguer-button{
+        display:block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
     .hero{
         height: auto;
         position: relative;
         overflow: hidden;
         padding: 2em;
-        background-color:transparent
     }
     .hero-image{
+        display: none;
         position: absolute;
         z-index: 1;
         left: 0;
@@ -297,6 +335,10 @@ h2{
     .header .logo{
         text-align: center;
     }
+    
+    .portfolio{
+        padding:0;
+    }
 
     .project{
         display: block;
@@ -306,13 +348,13 @@ h2{
         text-align: center;
     }
     .project-image{
-        object-fit: cover;
+        object-fit: fill;
         
         height: 200px;
     }
     .project-details{
         width: auto;
-        font-size: 16px;
+        font-size: 18px;
     }
     .project-title{
         font-size: 1.5em;
@@ -330,7 +372,7 @@ h2{
         font-size: 1em;
     }
     .project-description{
-        font-size: .8em;
+        font-size: 1em;
     }
     .project-techs, .project-date, .project-url{
         margin:.4em 0 ;
@@ -345,7 +387,7 @@ h2{
         font-size: 1.5em;
     }
     .project-details{
-        font-size: 12px;
+        font-size: 14px;
     }
     .card-detail{
         margin: -2em .5em .5em .5em;
@@ -372,5 +414,10 @@ h2{
    }
    .hero{
        padding: 2em 1em;
+   }
+   .social-link{
+       width: 40px;
+       height: 40px;
+       background-size: 40px;
    }
 }
